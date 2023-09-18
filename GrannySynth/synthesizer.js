@@ -30,6 +30,12 @@ startTimeVarianceControl.addEventListener('input', updateStartTimeVariance);
 
 
 async function handleAudioFile(event) {
+        audioContext = new AudioContext();
+        gainNode = audioContext.createGain();
+        gainNode.gain.value = 0.2;  // 50% volume
+        gainNode.connect(audioContext.destination);
+
+        document.getElementById('startAudioContext').disabled = true;
     const file = event.target.files[0];
     const arrayBuffer = await file.arrayBuffer();
     audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
@@ -38,14 +44,16 @@ async function handleAudioFile(event) {
     drawWaveform();
 }
 
-document.getElementById('startAudioContext').addEventListener('click', () => {
-        audioContext = new AudioContext();
-        gainNode = audioContext.createGain();
-        gainNode.gain.value = 0.2;  // 50% volume
-        gainNode.connect(audioContext.destination);
+//NOTE: Commented out - now handled by handleAudioFile()
+//TBD: Remove entirely. 
+// document.getElementById('startAudioContext').addEventListener('click', () => {
+//         // audioContext = new AudioContext();
+//         // gainNode = audioContext.createGain();
+//         // gainNode.gain.value = 0.2;  // 50% volume
+//         // gainNode.connect(audioContext.destination);
 
-        document.getElementById('startAudioContext').disabled = true;
-    });
+//         // document.getElementById('startAudioContext').disabled = true;
+//     });
 
 
 function startSynthesis() {

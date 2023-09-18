@@ -64,22 +64,25 @@
               <br> <h2><a href="https://drive.google.com/file/d/13A2ajpLbSPGDvQxzQZ7vJPz5oOTCIZnw/view?usp=sharing">I'm no longer looking for work, but feel free to click here to check out my resume.</a></h1>
       <br><br>
     </div>
-    <div class="section-separator"></div>
+    <!-- <div class="section-separator"></div> -->
     <!-- ... GRANNY SYNTH INSERTED ... -->
       <div class="w3-container" id="grannySynth" style="margin-top:80px">
 
-    <h4>Before you read on, take a moment to make some noise using my web-based granular synthesizer...</h4>
-    <h1>Nils's GrannySynth</h1>
-    <p>Step 1: Press below button to permit audio streaming</p>
+    <h8>Before you read on, take a moment to make some noise using my web-based granular synthesizer...</h8>
+    <!-- <h1>Nils's GrannySynth</h1> -->
+    <h1 class="w3-xxxlarge w3-text-red"><b>Nils's GrannySynth</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <!-- <p>Step 1: Press below button to permit audio streaming</p> -->
 
         <body>
-            <button id="startAudioContext">Start Audio Context</button>
+          <!-- Hid context button: This means Choose File will start the Audio Context. TBD: Remove entirely -->
+            <button style="display: none" id="startAudioContext">Start Audio Context</button> 
                         <p>
-                          <p>Step 2: Choose a .wav file (AIFF support coming!)</p>
+                          <p>Step 1: Choose a .wav file (AIFF support coming!)</p>
                 <input type="file" id="audio-file" accept="audio/*" />
             </p>
 
-            <p>Step 3: Press Start Synthesis and mess around with some parameters!</p>
+            <p>Step 2: Press Start Synthesis and mess around with some parameters!</p>
             <button id="start-synthesis">Start Synthesis</button>
             <button id="stop-synthesis">Stop Synthesis</button>
             <p> </p>
@@ -127,9 +130,9 @@
           width: 500px;
           }
           .section-separator {
-              border-bottom: 1px solid #ccc;   /* Change color as needed */
-              margin: 40px 0;                  /* Adjust margins as desired */
-              width: 80%;                      /* Adjust width as desired */
+              border-bottom: 2px solid #ccc;   
+              margin: 40px 0;                  
+              width: 80%;                      
               margin-left: auto;
               margin-right: auto;
           }
