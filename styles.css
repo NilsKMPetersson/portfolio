@@ -1,0 +1,74 @@
+/*Nils Petersson Portfolio*/
+/*Incorporating w3 CSS*/
+
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.circular--square {
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+/* Style icons */
+.fa {
+  padding: 20px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.2;
+}
+
+.fa:any-link{
+    font-size: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* Set a specific color for each brand */
+
+.fa-facebook {
+  background: #3B5998;;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-github{
+    background: white;
+    color: black;
+
+}
+
+.fa-linkedin{
+    background: white;
+    color: black;
+
+}
+
+.fa-spotify{
+    background: white;
+    color: black;
+
+}
+
+.fa-soundcloud{
+    background: white;
+    color: black;
+
+}
+
+.fa-imdb{
+    background: white;
+    color: black;
+
+}

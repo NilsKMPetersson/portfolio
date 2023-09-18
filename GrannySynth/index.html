@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonkey's GrannySynth</title>
+</head>
+<body>
+    <!-- waveform visualizer:  -->
+    <canvas id="waveform" width="800" height="200"></canvas>
+    <p>
+        <!-- Start Time -->
+        <input type="range" id="start-time" min="0" max="1" step="0.001" value="0">
+    </p>
+    <p>
+        Start Time Variance: 
+        <input type="range" id="start-time-variance" min="0" max="1" step="0.01" value="0">
+    </p>
+    
+    <button id="startAudioContext">Start Audio Context</button>
+    <h1>Zonkey's GrannySynth</h1>
+    <img src="https://external-preview.redd.it/8SRF-t_gY-hTthIzF_sgiblr959v6qpWMe8dOck679I.jpg?width=640&crop=smart&auto=webp&s=24d87efc1da5187f21a162c21d98ce42a57f8bb3" style="width: 200px;">
+    <p>
+        <input type="file" id="audio-file" accept="audio/*" />
+    </p>
+    <p>
+        Grain Size: 
+        <input type="range" id="grain-size" min="0.01" max="1" step="0.01" value="0.1" />
+    </p>
+    <p>
+        Grain Interval: 
+        <input type="range" id="grain-interval" min="10" max="500" step="10" value="50" /> ms
+    </p>
+    <p>
+        Base Playback Rate: 
+        <input type="range" id="base-playback-rate" min="0.01" max="2" step="0.01" value="1" />
+    </p>
+    <p>
+        Playback Rate Variance: 
+        <input type="range" id="playback-rate-variance" min="0" max="1" step="0.01" value="0.1" />
+    </p>
+    <button id="start-synthesis">Start Synthesis</button>
+    <button id="stop-synthesis">Stop Synthesis</button>
+    <canvas id="particleCanvas" style="position:absolute;z-index:3;pointer-events:none;background-color: transparent;"></canvas>
+    <script src="synthesizer.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+</html>
+<style>
+body {
+    /* Existing styles */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+
+}}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Adjust the 0.3 value to control the level of darkness */
+    z-index: -1;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+canvas {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+p {
+    color: #444;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 800px; /* Match the width of the waveform canvas */
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3E8E41;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:not(:last-child) {
+    margin-right: 10px;
+}
+
+#playback-rate-variance-knob {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+</style>

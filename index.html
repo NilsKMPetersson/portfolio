@@ -1,426 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Nils Petersson Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-.circular--square {
-  border-top-left-radius: 50% 50%;
-  border-top-right-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  border-bottom-left-radius: 50% 50%;
-}
-/* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  width: 80px;
-  text-align: center;
-  text-decoration: none;
-}
 
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.2;
-}
+<head>
+    <meta charset="UTF-8">
+    <title>Nils Petersson Portfolio</title>
+    <meta name="description" content="Nils Petersson's personal website & portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.fa:any-link{
-    font-size: 50px;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
+    <!-- TBD Facicons -->
+    <!-- <link rel="icon" href="path_to_icon/favicon-32x32.png" sizes="32x32"> -->
+    <!-- <link rel="icon" href="path_to_icon/favicon-16x16.png" sizes="16x16"> -->
 
-/* Set a specific color for each brand */
+    <!-- External stylesheets in order of increasing specificity -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-/*GitHub*/
-.fa-github{
-    background: white;
-    color: black;
-
-}
-
-/*LinkedIn*/
-.fa-linkedin{
-    background: white;
-    color: black;
-
-}
-
-/*Spotify*/
-.fa-spotify{
-    background: white;
-    color: black;
-
-}
-/*SoundCloud*/
-.fa-soundcloud{
-    background: white;
-    color: black;
-
-}
-
-/*IMDB*/
-.fa-imdb{
-    background: white;
-    color: black;
-
-}
-</style>
 <body>
+  <body>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <img class= "circular--square" src="https://avatars.githubusercontent.com/u/43551833?v=4" 
+        alt="Picture of Nils" style="width:100%;">
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Nils<br>Petersson</h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+            <a href="#grannySynth" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">GrannySynth</a>  
+      <a href="#software" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Software</a> 
+      <a href="#Hardware" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hardware</a> 
+      <a href="#Music" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Music</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    </div>
+  </nav>
 
-      <img class= "circular--square" src="https://avatars.githubusercontent.com/u/43551833?v=4" 
-      alt="Nils" style="width:100%;">
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Nils Petersson</span>
+  </header>
 
-    <h3 class="w3-padding-64"><b>Nils<br>Petersson</h3>
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo"><b>Nils Petersson</b></h1>
+      <h2>Welcome to my website! My name is Nils, and I am a:</h2>
+      <p>• Audio software developer</p>
+      <p>• Professional musician</p>
+      <p>• Film audio engineer</p>
+      <p>• General audio nerd
+          <br><br><br>
+          <p>My favorite languages are C++ and Python, but I'm also fluent in English, Swedish, and Italian. <br>
+              I am currently working at MAAT Digital as Lead Developer. If you have any questions about my work, please get in touch! Always happy to chat. </p>
+              <br> <h2><a href="https://drive.google.com/file/d/13A2ajpLbSPGDvQxzQZ7vJPz5oOTCIZnw/view?usp=sharing">I'm no longer looking for work, but feel free to click here to check out my resume.</a></h1>
+      <br><br>
+    </div>
+
+    <!-- ... GRANNY SYNTH INSERTED ... -->
+      <div class="w3-container" id="grannySynth" style="margin-top:80px">
+
+    <h4>Before you read on, take a moment to make some noise...</h4>
+    <h1>Nils's GrannySynth</h1>
+    <p>Step 1: Press below button to permit audio streaming</p>
+
+        <body>
+            <button id="startAudioContext">Start Audio Context</button>
+                        <p>
+                          <p>Step 2: Choose a .wav file (AIFF support coming!)</p>
+                <input type="file" id="audio-file" accept="audio/*" />
+            </p>
+
+            <p>Step 3: Press Start Synthesis and mess around with some parameters!</p>
+            <button id="start-synthesis">Start Synthesis</button>
+            <button id="stop-synthesis">Stop Synthesis</button>
+            <p> </p>
+            <!-- waveform visualizer:  -->
+            <p>Waveform visualizer:</p>
+            <canvas id="waveform" width="500" height="200"></canvas>
+            <p>
+                <!-- Start Time -->
+                <input type="range" id="start-time" min="0" max="1" step="0.001" value="0"> Start Time
+            </p>
+            <p>
+                
+                <input type="range" id="start-time-variance" min="0" max="1" step="0.01" value="0"> Start Time Randomness
+            </p>
+            
+
+            <!-- <h1>Zonkey's GrannySynth</h1> -->
+            <!-- <img src="https://external-preview.redd.it/8SRF-t_gY-hTthIzF_sgiblr959v6qpWMe8dOck679I.jpg?width=640&crop=smart&auto=webp&s=24d87efc1da5187f21a162c21d98ce42a57f8bb3" style="width: 200px;"> -->
+            <p>
+                
+                <input type="range" id="grain-size" min="0.01" max="1" step="0.01" value="0.1" />
+                Grain Size
+            </p>
+            <p>
+                <!-- Grain Interval:  -->
+                <input type="range" id="grain-interval" min="10" max="500" step="10" value="50" /> Grain Interval (ms)
+            </p>
+            <p>
+                <input type="range" id="base-playback-rate" min="0.01" max="2" step="0.01" value="1" />
+                Base Playback Rate
+            </p>
+            <p>
+                <input type="range" id="playback-rate-variance" min="0" max="1" step="0.01" value="0.1" />
+                Playback Rate Randomness
+            </p>
+            <!-- <canvas id="particleCanvas" style="position:absolute;z-index:3;pointer-events:none;background-color: transparent;"></canvas> -->
+            <script src="GrannySynth/synthesizer.js"></script>
+        </body>
+        <style> 
+          #waveform {
+          border: 2px solid #000;  /* This is a 2-pixel black border. You can adjust as needed. */
+          }
+
+          #start-time {
+          width: 500px;
+          }
+        </style>
+        </html>
+
+        <!-- ... GRANNY SYNTH INSERTED/end ... -->
   </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#software" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Software</a> 
-    <!-- Attempt at a new sidebar menu: -->
-    <a href="#Hardware" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Hardware</a> 
-
-    <a href="#Music" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Music</a>  
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Nils Petersson</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Nils Petersson</b></h1>
-    <h2>Welcome to my website! My name is Nils, and I am a:</h2>
-    <p>• Audio software developer</p>
-    <p>• Professional musician</p>
-    <p>• Film audio engineer</p>
-    <p>• General audio nerd
-        <br><br><br>
-        <!-- <p>My favorite languages are C++ and Python, but I'm also fluent in English, Swedish, and Italian. <br>
-            I am currently working at MAAT Digital as Lead Developer. If you have any questions about that or my work, please get in touch! Always happy to chat. </p> -->
-            <br> <h2><a href="https://drive.google.com/file/d/13A2ajpLbSPGDvQxzQZ7vJPz5oOTCIZnw/view?usp=sharing">I'm no longer looking for work, but feel free to click here to check out my resume.</a></h1>
-    <br><br>
     
-    <!-- <h1 class="w3-xxxlarge w3-text-red"><b>Software.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round"> -->
-  </div>
-  
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
+    <!-- Photo grid-->
+    <div class="w3-row-padding">
 
-
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  <!-- Services -->
-  <div class="w3-container" id="software" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Software.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p:>I like to make music and audio editing softare. My favorite programming language is C++, but I have also worked in Python, Javascript, and Max MSP. 
-        I am currently Lead Developer at MAAT Digital To learn more about the cool plug-ins I work on, <a href="https://www.maat.digital/">click here!</a> <br><br>
-        Below are some of my favorite projects that I've worked on:</p>
-     <br><br>
-
-  </div>
-
-  <!--
-      <div class="w3-half"> THIS IS COMMENTED OUT FOR SIDEBAR REASONS!!
-        <h1>MAAT MtG: A room tone editing plugin</h1>
-      <img src="https://www.maat.digital/assets/images/product-mtg-702d8bd9.png" style="width:70%" onclick="onClick(this)" alt="MAAT Mind The Gap: Room tone processing tool">
-      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">THIS IS COMMENTED OUT
-      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs"> THIS IS COMMENTED OUT
-      <p>Text about MTG.</p>
-      <br><br><br><br><br><br><br>
-      <h1>toneSampler: Room tone regeneration plugin for Pro Tools</h1>
-      <img src="https://i.imgur.com/YUgsWAY.png" style="width:50%" onclick="onClick(this)" alt="toneSampler: Roomtone regeneration plugin">
-      <p>Text about toneSampler!!!!</p>
-
-
-      <br><br><br><br><br><br><br>
-      <h1>8-Bit Machine: Chiptune inspired drum sequencer & synthesizer</h1>
-      <img src="https://i.imgur.com/VgGfTqO.png" style="width:50%" onclick="onClick(this)" alt="8-Bit Machine: Chiptune inspired drum sequencer & synthesizer">
-      <br>
-      <p>Text about 8bit machine!!!!</p>
-    </div>-->
-  
-
-   <!-- The Team COPY FOR SOFTWARE-->
-   <div class="w3-row-padding">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/AT7Ih3s.png" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>MAAT MtG - Mind The Gap</h3>
-          <p class="w3-opacity">Multi-platform speech processing plugin</p>
-          <p>Mind The Gap is a plugin aimed at audio editors who work with dialog and speech. 
-            The code was written in C++ using the JUCE framework, by myself and Adam Shield. 
-            The plugin is launched and for sale. 
-            <br><br>
-            <a href="https://www.maat.digital/mtg/">Click here to take a closer look on the MAAT website!</a></p>
-          </p>
-          <p>Or check out this MtG intro video by MAAT CEO Friedemann Tischmeyer:</p>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/xb_J2ibMnnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
       </div>
     </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/5w8BE1V.png" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>toneSampler</h3>
-          <p class="w3-opacity">Room tone regeneration plugin for Pro Tools AudioSuite</p>
-          <p>toneSampler was created in partial fulfillment of my NYU Music Technology thesis. 
-              It is truly a labor of love, and something I've dreamed of creating since I first began my film audio career. 
-            Room tone is one of the most tedious tasks of any film audio editor. 
-            My goal was to solve this issue by creating a novel algorithm that samples and resynthesizes unique room tone, to be rendered by the user endlessly.</p>
-            <br>
-            <p>toneSampler is currently in the alpha stage. Please check back to see updates!</p>
-        </div>
-      </div>
+
+    <!-- Software Introduction -->
+    <div class="w3-container" id="software" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Software.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p:>I like to make music and audio editing softare. My favorite programming language is C++, but I have also worked in Python, Javascript, and Max MSP. 
+          I am currently Lead Developer at MAAT Digital To learn more about the cool plug-ins I work on, <a href="https://www.maat.digital/">click here!</a> <br><br>
+          Below are some of my favorite projects that I've worked on:</p>
+       <br><br>
+
     </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/VgGfTqO.png" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>8-Bit Machine</h3>
-          <p class="w3-opacity">8-Bit Machine</p>
-          <p>The Zonkey™️ 8-Bit Machine is one of my first audio software projects, written in Max MSP. 
-            In middle school I dreamed of being a famous chiptune producer, which inspired me to make a standalone chiptune creator. 
-            It features an 8-Bit style synthesizer, a bitcrushed drum machine, an "improv" algorithm, and more. 
-            It's not the most serious creation, but I've spent hours playing around with the sequencer. 
-            <br><br>
-            Check out this short demo: 
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Df6FxNy0kgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
-<!-- HARDWARE SECTION: -->
-
-  <!-- Designers COPY for hardware-->
-  <div class="w3-container" id="Hardware" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Hardware Instrument Design.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>I'm no physicist, but I love to play around with circuits to make weird DIY instruments. </p>
-    <br><br>
-
-  </div>
-
-   <!-- The Team -->
-   <div class="w3-row-padding">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/yIf19Zx.png" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>Homemade Spring Reverb</h3>
-          <p>I built a spring reverb using an old portable iPod speaker and a piezo microphone. 
-              My grandfather and I built a box, using sawed pine branches as knobs. It's not studio quality, but it has a very unique sound. 
-          </p>
-          <br>
-          <br>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/rw45ImIoE5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/K5DLaCF.png" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>♥︎ Heart Synth ♥︎</h3>
-          <p>I built a heart-controlled digital synthesizer/step sequencer. 
-              It was built using a heart-rate monitor that can be worn on a finger. 
-            The signal analysis and synthesis both happen on an Arduino Teensy microcomputer. </p>
-              <br><br>
-
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/8kncr2PZEvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://i.imgur.com/Nphw2ro.png" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>'Sawed-Off Shorgan'</h3>
-          <p>This one's a bit strange - using an old bucket, I built an acoustic pipe synthesizer. 
-              Technically the pipe is not the actual synthesizer, merely a filter. 
-              Max MSP controls three speaker cones, which output white noise into each pipe. 
-              The result is three distinct pitched percussive sounds.</p>
-              <br><br>
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/6AgTQI29OGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-  <!-- Designers -->
-  <div class="w3-container" id="Music" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Music.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>I consider music to be a key part of my identity. 
-        I'm a freelancing film composer, and have created original music for several YouTube series and podcasts, with a total of over three million views. 
-        Here are some of my favorite projects:</p>
-  </div>
-  <br><br>
-
-<!-- MUSIC SECTION: -->
-  <!-- The Team -->
-  <div class="w3-row-padding">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://f4.bcbits.com/img/a0422358008_10.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>Zonkey - Half Ass</h3>
-          <p class="w3-opacity">Solo music project</p>
-          <p>"Half Ass" is an album I put together under the name Zonkey, featuring many close friends and musicians I admire. 
-              Currently I have a small dedicated fanbase of just over 100 monthly listeners on streaming platforms. 
-              Each track is composed, recorded and mixed by me, and mastered by Kerim Wilhelm at Corner Store Studios in Bushwick, Brooklyn. </p><br>
-              
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/bvFBPe5GKE0?list=PLDZZn2u51R0kotnYfnWaA921hVdLsMPQJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <br>
-              <br>
-
-            </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
+     <!--Software-->
+     <div class="w3-row-padding">
+      <div class="w3-col m4 w3-margin-bottom">
         <div class="w3-light-grey">
-          <img src="https://i.imgur.com/w11QfYr.png" alt="Mike" style="width:100%">
+          <img src="https://i.imgur.com/AT7Ih3s.png" alt="John" style="width:100%">
           <div class="w3-container">
-            <h3>Zonkeys In Space - Immersive VR & 3D Audio Experience</h3>
-            <p class="w3-opacity">Animated music video</p>
-            <p>I created an immersive VR animation using Unity3D and the Oculus 3D audio algorithm. 
-                The animation serves as a music video for a song off my album "Half Ass."<br><br>
-            Check it out below, wear a VR headset for maximum immersion!</p>
-
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/aCaLpBZeFDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>MAAT MtG - Mind The Gap</h3>
+            <p class="w3-opacity">Multi-platform speech processing plugin</p>
+            <p>Mind The Gap is a plugin aimed at audio editors who work with dialog and speech. 
+              The code was written in C++ using the JUCE framework, by myself and Adam Shield. 
+              The plugin is launched and for sale. 
+              <br><br>
+              <a href="https://www.maat.digital/mtg/">Click here to take a closer look on the MAAT website!</a></p>
+            </p>
+            <p>Or check out this MtG intro video by MAAT CEO Friedemann Tischmeyer:</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xb_J2ibMnnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="https://m.media-amazon.com/images/I/81IOCzVSywL._SS500_.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Tabemono</h3>
-          <p class="w3-opacity">Jazzy hip hop band</p>
-          <p>Tabemono is a music project I have together with my best friends. Pre-pandemic, we regularly played local venues such as Brooklyn Bazaar (and soon we will again!)
-             Below is a performance of a song I wrote called "Bamsing."</p><br>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/eMzPvhjo1CI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.imgur.com/5w8BE1V.png" alt="Jane" style="width:100%">
+          <div class="w3-container">
+            <h3>toneSampler</h3>
+            <p class="w3-opacity">Room tone regeneration plugin for Pro Tools AudioSuite</p>
+            <p>toneSampler was created in partial fulfillment of my NYU Music Technology thesis. 
+                It is truly a labor of love, and something I've dreamed of creating since I first began my film audio career. 
+              Room tone is one of the most tedious tasks of any film audio editor. 
+              My goal was to solve this issue by creating a novel algorithm that samples and resynthesizes unique room tone, to be rendered by the user endlessly.</p>
+              <br>
+              <p>toneSampler is currently in the alpha stage. Please check back to see updates!</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.imgur.com/VgGfTqO.png" alt="Mike" style="width:100%">
+          <div class="w3-container">
+            <h3>8-Bit Machine</h3>
+            <p class="w3-opacity">8-Bit Machine</p>
+            <p>The Zonkey™️ 8-Bit Machine is one of my first audio software projects, written in Max MSP. 
+              In middle school I dreamed of being a famous chiptune producer, which inspired me to make a standalone chiptune creator. 
+              It features an 8-Bit style synthesizer, a bitcrushed drum machine, an "improv" algorithm, and more. 
+              It's not the most serious creation, but I've spent hours playing around with the sequencer. 
+              <br><br>
+              Check out this short demo: 
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/Df6FxNy0kgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </p>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Hardware Intrduction -->
+    <div class="w3-container" id="Hardware" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Hardware Instrument Design.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>I'm no physicist, but I love to play around with circuits to make weird DIY instruments. </p>
+      <br><br>
+
+    <!-- Hardware: -->
+    </div>
+     <div class="w3-row-padding">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.imgur.com/yIf19Zx.png" alt="John" style="width:100%">
+          <div class="w3-container">
+            <h3>Homemade Spring Reverb</h3>
+            <p>I built a spring reverb using an old portable iPod speaker and a piezo microphone. 
+                My grandfather and I built a box, using sawed pine branches as knobs. It's not studio quality, but it has a very unique sound. 
+            </p>
+            <br>
+            <br>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/rw45ImIoE5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.imgur.com/K5DLaCF.png" alt="Jane" style="width:100%">
+          <div class="w3-container">
+            <h3>♥︎ Heart Synth ♥︎</h3>
+            <p>I built a heart-controlled digital synthesizer/step sequencer. 
+                It was built using a heart-rate monitor that can be worn on a finger. 
+              The signal analysis and synthesis both happen on an Arduino Teensy microcomputer. </p>
+                <br><br>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/8kncr2PZEvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://i.imgur.com/Nphw2ro.png" alt="Mike" style="width:100%">
+          <div class="w3-container">
+            <h3>'Sawed-Off Shorgan'</h3>
+            <p>This one's a bit strange - using an old bucket, I built an acoustic pipe synthesizer. 
+                Technically the pipe is not the actual synthesizer, merely a filter. 
+                Max MSP controls three speaker cones, which output white noise into each pipe. 
+                The result is three distinct pitched percussive sounds.</p>
+                <br><br>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/6AgTQI29OGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Music Introduction -->
+    <div class="w3-container" id="Music" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Music.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>I consider music to be a key part of my identity. 
+          I'm a freelancing film composer, and have created original music for several YouTube series and podcasts, with a total of over three million views. 
+          Here are some of my favorite projects:</p>
+    </div>
+    <br><br>
+
+  <!-- Music: -->
+    <div class="w3-row-padding">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://f4.bcbits.com/img/a0422358008_10.jpg" alt="John" style="width:100%">
+          <div class="w3-container">
+            <h3>Zonkey - Half Ass</h3>
+            <p class="w3-opacity">Solo music project</p>
+            <p>"Half Ass" is an album I put together under the name Zonkey, featuring many close friends and musicians I admire. 
+                Currently I have a small dedicated fanbase of just over 100 monthly listeners on streaming platforms. 
+                Each track is composed, recorded and mixed by me, and mastered by Kerim Wilhelm at Corner Store Studios in Bushwick, Brooklyn. </p><br>
+                
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/bvFBPe5GKE0?list=PLDZZn2u51R0kotnYfnWaA921hVdLsMPQJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <br>
+
+              </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+          <div class="w3-light-grey">
+            <img src="https://i.imgur.com/w11QfYr.png" alt="Mike" style="width:100%">
+            <div class="w3-container">
+              <h3>Zonkeys In Space - Immersive VR & 3D Audio Experience</h3>
+              <p class="w3-opacity">Animated music video</p>
+              <p>I created an immersive VR animation using Unity3D and the Oculus 3D audio algorithm. 
+                  The animation serves as a music video for a song off my album "Half Ass."<br><br>
+              Check it out below, wear a VR headset for maximum immersion!</p>
+
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/aCaLpBZeFDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="https://m.media-amazon.com/images/I/81IOCzVSywL._SS500_.jpg" alt="Jane" style="width:100%">
+          <div class="w3-container">
+            <h3>Tabemono</h3>
+            <p class="w3-opacity">Jazzy hip hop band</p>
+            <p>Tabemono is a music project I have together with my best friends. Pre-pandemic, we regularly played local venues such as Brooklyn Bazaar (and soon we will again!)
+               Below is a performance of a song I wrote called "Bamsing."</p><br>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/eMzPvhjo1CI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>Please feel free to get in touch! I'd love to hear from you, even if you're just looking to chat.</p>
+      <div class="w3-row w3-padding-32">
+          <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width:30px"></i> Brooklyn, New York<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone: +1 917 873 8438<br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: nilskmpetersson@gmail.com<br>
+                <!-- Add font awesome icons -->
+          </div>
+          <br><br><br><br><br><br><br><br>
+                <p>Or find me on the web:</p>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <a href="https://github.com/NilsKMPetersson" class="fa fa-github"></a>
+  <a href="https://www.linkedin.com/in/nils-petersson-3831aa155/" class="fa fa-linkedin"></a>
+  <a href="https://open.spotify.com/artist/0MchMTHhCk93CkoAPn5lvQ?si=QLjEGnxURFyWcgOJVlB90g" class="fa fa-spotify"></a>
+  <a href="https://soundcloud.com/user-757257963-429238617/sets/half-ass" class="fa fa-soundcloud"></a>
+  <a href="https://www.imdb.com/name/nm8258109/" class="fa fa-imdb"></a>
+          </div>
+
+
+    
+
+
+  <!-- End page content -->
   </div>
 
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Please feel free to get in touch! I'd love to hear from you, even if you're just looking to chat.</p>
-    <div class="w3-row w3-padding-32">
-        <div class="w3-col m6 w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker" style="width:30px"></i> Brooklyn, New York<br>
-          <i class="fa fa-phone" style="width:30px"></i> Phone: +1 917 873 8438<br>
-          <i class="fa fa-envelope" style="width:30px"> </i> Email: nilskmpetersson@gmail.com<br>
-              <!-- Add font awesome icons -->
-        </div>
-        <br><br><br><br><br><br><br><br>
-              <p>Or find me on the web:</p>
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<a href="https://github.com/NilsKMPetersson" class="fa fa-github"></a>
-<a href="https://www.linkedin.com/in/nils-petersson-3831aa155/" class="fa fa-linkedin"></a>
-<a href="https://open.spotify.com/artist/0MchMTHhCk93CkoAPn5lvQ?si=QLjEGnxURFyWcgOJVlB90g" class="fa fa-spotify"></a>
-<a href="https://soundcloud.com/user-757257963-429238617/sets/half-ass" class="fa fa-soundcloud"></a>
-<a href="https://www.imdb.com/name/nm8258109/" class="fa fa-imdb"></a>
-        </div>
-    <!-- </form>  
-    <footer class="w3-container w3-teal w3-center w3-margin-top">
-        <p>Find me on social media.</p>
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+   
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
 
-      </footer> -->
-
-
-
-  
-
-
-<!-- End page content -->
-</div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  </script>
 
 </body>
 </html>
